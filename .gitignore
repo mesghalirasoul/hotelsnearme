@@ -1,0 +1,71 @@
+# Compiled python modules.
+*.pyc
+/**/__pycache__
+
+# Setuptools distribution folder.
+/dist/
+/build/
+/**/.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/src/*.egg-info
+*.egg-info
+.eggs
+
+# mypy files
+.mypy_cache
+
+# spyder files
+.spyproject
+*.spydata
+
+# windows files
+Thumbs.db
+desktop.ini
+.tmp.drivedownload
+
+#output files
+# *.png
+
+#data and model files
+*.xz
+*.csv
+*.ser
+*.mod
+*.df
+
+#Documentation
+doc/build
+
+.vscode/.ropeproject/
+
+# Mac folder description file
+*.DS_Store
+
+# Data files and models
+/examples/**/*.json
+/examples/**/*.joblib
+/examples/**/*.txt
+
+.idea/
+
+/**/*.log
+/**/dump_*
+/**/config.c
+.pytest_cache/
+
+# The database should not be checked in!
+db.sqlite3
+
+poetry.lock
+
+tmp/
+*.zip
+
+dump.rdb
+
+!templates/*
+
+staticfiles/*
+static/*

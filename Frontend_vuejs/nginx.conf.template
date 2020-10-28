@@ -1,0 +1,20 @@
+error_log  /var/log/nginx/error.log debug;
+access_log /var/log/nginx/access.log;
+
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+
+  location / {
+      root /usr/share/nginx/html;
+      index index.html;
+      try_files $uri $uri/ /index.html;
+
+    }
+  location /api/ {
+      # proxy_pass http://backend_django:8000;
+      proxy_pass ${backend_host};
+      proxy_set_header Host $http_host;
+
+    }
+}

@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "84130705-a54d-4f48-8bf1-7b6725b17030",
+		"name": "Ch_Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/properties?at=36.869794,30.722242",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties"
+					],
+					"query": [
+						{
+							"key": "at",
+							"value": "36.869794,30.722242"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"property\":{\n\"title\":\"Hotel1\",\n\"latitude\":11,\n\"longitude\":231,\n\"property_id\":\"erh3241324134\"\n\n},\n\"customer_name\":\"Amin Bahramizadeh\",\n\"customer_phone_number\":\"05319876543\",\n\"customer_email\": \"afsdfasdf@fad.com\",\n\"checkin_date\":\"2020-10-22\",\n\"checkout_date\":\"2020-10-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bookings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookinsg for a property",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/properties/erh3241324134/bookings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"properties",
+						"erh3241324134",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
