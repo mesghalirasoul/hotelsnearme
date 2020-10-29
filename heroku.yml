@@ -4,7 +4,7 @@ setup:
     - plan: heroku-redis
   build:
     docker:
-      web: Dockerfile
+      web: /Backend_Django/Dockerfile
   run:
     web: /app/initiator.sh
   
