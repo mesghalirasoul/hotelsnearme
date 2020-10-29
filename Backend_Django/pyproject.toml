@@ -16,6 +16,7 @@ requests = "^2.24.0"
 django-cors-headers = "^3.5.0"
 django-phonenumber-field = {extras = ["phonenumberslite"], version = "^5.0.0"}
 django-log-request-id = "^1.6.0"
+uwsgi = "^2.0.19"
 
 [tool.poetry.dev-dependencies]
 

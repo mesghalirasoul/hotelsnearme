@@ -8,7 +8,7 @@ WORKDIR /app
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
     mkdir -p /opt/dist
 
-# ENV PATH "/root/.poetry/bin:${PATH}"
+ENV PATH "/root/.poetry/bin:${PATH}"
 ENV PYTHONUNBUFFERED 1 
 ENV PYTHONDONTWRITEBYTECODE 1
 
