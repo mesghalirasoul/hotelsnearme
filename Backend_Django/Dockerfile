@@ -5,7 +5,22 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
-# #poetry add redis pylint-celery django-celery-beat celery
+RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python && \
+    mkdir -p /opt/dist
+
+# ENV PATH "/root/.poetry/bin:${PATH}"
+ENV PYTHONUNBUFFERED 1 
+ENV PYTHONDONTWRITEBYTECODE 1
+
+ENV XDG_CACHE_HOME=/root/.cache
+
+RUN    pip3 install --upgrade \
+        pip \
+        pipenv \
+        setuptools \
+        wheel \
+        gunicorn
+
 RUN pip3 install poetry
 RUN poetry install    
 

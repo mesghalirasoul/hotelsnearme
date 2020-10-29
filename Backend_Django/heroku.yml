@@ -1,0 +1,10 @@
+setup:
+    addons:
+    - plan: heroku-postgresql
+    - plan: heroku-redis
+  build:
+    docker:
+      web: Dockerfile
+  run:
+    web: /app/initiator.sh
+  
