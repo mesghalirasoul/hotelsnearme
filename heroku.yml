@@ -1,7 +1,6 @@
 setup:
-    addons:
+  addons:
     - plan: heroku-postgresql
-    - plan: heroku-redis
   build:
     docker:
       web: /Backend_Django/Dockerfile
