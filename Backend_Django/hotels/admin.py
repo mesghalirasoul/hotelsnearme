@@ -1,8 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
-
-# from django.contrib.gis.admin import OSMGeoAdmin
-from .models import Property
+from .models import Property, Booking
 
 admin.site.register(Property)
+admin.site.register(Booking)
